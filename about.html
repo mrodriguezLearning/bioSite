@@ -1,0 +1,81 @@
+<!--
+Marco Rodriguez
+BioSite
+This is a project to create a simple, responsive, and accessible website for Madison Berry,
+7/4/2026
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madison Berry - About Me</title>
+    <!-- Google Fonts and Font Awesome -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Elms+Sans:wght@300;400;500;700&display=swap">
+    <script src="https://kit.fontawesome.com/ce19d9c356.js" crossorigin="anonymous"></script>
+    <!-- CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="nav-pill">
+        <div class="logo">Madison Berry</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active-pill-btn">About Me</a>
+            <a href="hobbies.html">Hobbies</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="about-split-layout">
+        <!-- Biography using HTML5 article element -->
+        <article class="about-biography">
+            <h1>About</h1>
+            <p class="about-subheading">Licensed Clinical Social Worker & Private Practice Founder</p>
+            
+            <div class="bio-text-block">
+                <p>Madison Berry is a dedicated Licensed Clinical Social Worker (LCSW) who owns and operates an independent private therapy practice. Driven by a lifelong desire to help others, Madison focuses on providing deep, one-on-one support grounded in an empathetic, relational, and collaborative framework. Her therapeutic approach centers on helping individuals uncover their internal strengths and build practical, real-world tools. By transitioning into private practice, she intentionally created a professional structure that allows her to manage her own schedule, ensuring she can dedicate meaningful time to connecting with her family.</p>
+                
+                <p>In her clinical work, Madison finds immense reward in witnessing the exact moments her clients reconnect with their own resilience and begin successfully applying boundaries in their lives. Looking to the future, her primary goals center on growing and scaling her practice to reach more individuals in need. She is particularly passionate about expanding her services to offer specialized, compassionate support to caregivers and those living with dementia.</p>
+                
+                <p>To maintain her own personal balance away from her caseload, Madison intentionally steps back from her clinical role to embrace a variety of creative and grounding hobbies. She stays energized by spending time outdoors, painting, baking, and focusing on family life. This creative side naturally influences her philosophy on web presentation, where she values designs that tell a story in a simple, understated way. Ultimately, Madison views curiosity and lifelong learning as essential values. Keeping up with research-informed best practices allows her to exercise her brain and continuously expand her worldview, ensuring she shows up for others as a genuinely compassionate and creative professional.</p>
+            </div>
+        </article>
+
+        <!-- Portrait image using HTML5 aside and figure elements -->
+        <aside class="about-media-column">
+            <figure class="portrait-container">
+                <img src="images/madison_about.webp" alt="Madison Berry Portrait in red sweater">
+                <figcaption>Madison Berry, Licensed Clinical Social Worker (LCSW)</figcaption>
+            </figure>
+        </aside>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-top-row">
+            <div class="footer-brand-block">
+                <h3>Madison Berry</h3>
+                <div class="social-icon-strip">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="hobbies.html">Hobbies</a>
+            </nav>
+        </div>
+        <div class="footer-copyright-row">
+            <p>2026 Marco Rodriguez Copyright &copy;</p>
+        </div>
+    </footer>
+
+</body>
+</html>

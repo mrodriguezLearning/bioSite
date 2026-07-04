@@ -1,0 +1,485 @@
+/*  ==========================================================================
+    Marco Rodriguez
+    BioSite
+    This is a project to create a simple, responsive, and accessible website for Madison Berry,
+    Global Stylesheet for Madison Berry BioSite
+    7/4/2026
+   ========================================================================== */
+/* Global Color Palette Variables */
+:root {
+    --color-white: #fcf9f6; /* White */
+    --color-gray: #403F3B; /* Dark Gray */
+    --color-orange: #C26B42; /* Burnt Orange */
+    --color-beige: #E7D5C6; /* Beige */
+}
+/* Core Document Properties Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Global Body Layout and Typography */
+body {
+    font-family: 'Elms Sans', sans-serif;
+    background-color: var(--color-white);
+    color: var(--color-gray);
+    min-height: 100vh;
+    padding: 40px 5% 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Floating Navigation Header Pill */
+.nav-pill {
+    width: 100%;
+    max-width: 1200px;
+    background-color: var(--color-beige);
+    height: 90px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    margin-bottom: 40px;
+}
+
+.nav-pill .logo {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--color-gray);
+}
+
+.nav-pill .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-pill .nav-links a {
+    text-decoration: none;
+    color: var(--color-gray);
+    font-size: 0.95rem;
+    font-weight: 400;
+    transition: opacity 0.2s ease;
+}
+
+.nav-pill .nav-links a:hover {
+    opacity: 0.8;
+}
+
+/* Active Highlight Button Pill State */
+.nav-pill .nav-links .active-pill-btn {
+    background-color: var(--color-orange); /* Warm terracotta accent text fill */
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 400;
+}
+
+/* Main Asymmetric Hero Card Container */
+.hero-card {
+    width: 100%;
+    max-width: 1200px;
+    background-color: var(--color-beige);
+    border-radius: 40px;
+    min-height: 480px;
+    display: flex;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.hero-content {
+    flex: 1;
+    padding: 80px 40px 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+.hero-content p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-weight: 300;
+    margin-bottom: 35px;
+    max-width: 520px;
+    opacity: 0.9;
+}
+
+.hero-action-btn {
+    display: inline-block;
+    align-self: flex-start;
+    background-color: var(--color-orange);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 16px 36px;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.hero-action-btn:hover {
+    background-color: var(--color-orange);
+    transform: translateY(-1px);
+}
+
+/* Graphic Overlay Framing Positioning using Awsome Fonts */
+.hero-graphic-wrap {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    /* Using a Font Awesome SVG icon as a decorative background element */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="%23dcc6b9" transform="rotate(80 320 320)" d="M320 64C337.7 64 352 78.3 352 96L352 264.6L496 181.5C511.3 172.7 530.9 177.9 539.7 193.2C548.5 208.5 543.3 228.1 528 236.9L384 320L528 403.1C543.3 411.9 548.6 431.5 539.7 446.8C530.8 462.1 511.3 467.4 496 458.5L352 375.4L352 544C352 561.7 337.7 576 320 576C302.3 576 288 561.7 288 544L288 375.4L144 458.5C128.7 467.3 109.1 462.1 100.3 446.8C91.5 431.5 96.7 412 112 403.1L256 320L112 236.9C96.7 228 91.5 208.5 100.3 193.1C109.1 177.7 128.7 172.6 144 181.4L288 264.6L288 96C288 78.3 302.3 64 320 64z"/></svg>');
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background-position: center;
+}
+
+.hero-portrait {
+    position: absolute;
+    height: 110%;
+    object-fit: contain;
+    display: block;
+    z-index: 1;
+}
+
+/*Family quotes */
+.family-showcase {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 80px;
+}
+
+.family-showcase h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.card-matrix {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.testimonial-card {
+    background-color: #ffffff;
+    border: 1px solid #f0e7e1;
+    border-radius: 12px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
+    box-shadow: 0 4px 12px rgba(74, 59, 50, 0.02);
+}
+
+.quote-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-style: normal;
+    font-weight: 300;
+    color: #5c4c42;
+    margin-bottom: 25px;
+}
+
+.profile-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar-placeholder {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+.avatar-placeholder img {
+    width: 100%;
+    height: 100%;
+    /* Ensures the image fills the container while maintaining its aspect ratio */
+    object-fit: cover;
+    border-radius: 50px;
+}
+.color-a { 
+    background-color: #a37f6b;
+    border: #a37f6b 2px solid;
+}
+.color-b {
+    background-color: #6b8fa3;
+    border: #6b8fa3 2px solid;
+}
+.color-c { 
+    background-color: #8fa36b;
+    border: #8fa36b 2px solid;
+}
+
+.meta-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.profile-role {
+    font-size: 0.8rem;
+    color: #8c7b70;
+}
+
+/* Global Footer Layout Component */
+.site-footer {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: auto;
+    padding: 60px 0 30px 0;
+    border-top: 1px solid #ebdcd3;
+}
+
+.footer-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.footer-brand-block h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.social-icon-strip {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon-strip a {
+    text-decoration: none;
+    color: var(--color-gray);
+    font-size: 1.25rem;
+}
+
+.social-icon-strip a:hover {
+    color: var(--color-orange);
+}
+
+.footer-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: var(--color-gray);
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.footer-copyright-row {
+    text-align: center;
+}
+
+.footer-copyright-row p {
+    font-size: 0.75rem;
+    color: #8c7b70;
+    font-weight: 400;
+}
+/* ==========================================================================
+   Hobbies Page Layout
+   ========================================================================== */
+.hobbies-page {
+    background-color: var(--color-white);
+    /* Use a high-quality colorful abstract splash background asset */
+    background: url('images/hobbies_banner.jpg') no-repeat top center;
+    background-size: cover;
+    padding: 40px 5% 60px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* 1. Splattered Ink Hero Banner Component */
+.hobbies-hero {
+    width: 100%;
+    height: 530px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 0 20px;
+}
+
+.hero-text-overlay h1 {
+    font-size: 8rem;
+    font-weight: 700;
+    color: var(--color-gray);
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+}
+
+.hero-text-overlay p {
+    font-size: 2.25rem;
+    font-weight: 400;
+    color: var(--color-gray);
+    opacity: 0.85;
+}
+
+/* Alternating Showcase Layout Content Block */
+.hobbies-content-grid {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin-bottom: 80px;
+}
+
+.hobby-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+/* Reversing arrangement layout matrix row parameters for even rows */
+.hobby-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.hobby-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hobby-text h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-gray);
+    margin-bottom: 20px;
+}
+
+.hobby-text p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-weight: 300;
+    color: var(--color-gray);
+    opacity: 0.9;
+}
+
+.hobby-media {
+    flex: 1;
+    max-width: 560px;
+    height: 360px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(74, 59, 50, 0.05);
+}
+
+.hobby-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.hobby-media img:hover {
+    transform: scale(1.02);
+}
+/* ==========================================================================
+   About Page Layout
+   ========================================================================== */
+
+/* Main Split-Screen Content Layout Grid */
+.about-split-layout {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 80px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+/* Left Column: Biography Details */
+.about-biography {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-biography h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--color-gray);
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+}
+
+.about-biography .about-subheading {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--color-gray);
+    opacity: 0.6;
+    margin-bottom: 40px;
+}
+
+.bio-text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.bio-text-block p {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    font-weight: 300;
+    color: var(--color-gray);
+    opacity: 0.95;
+    text-align: justify;
+}
+
+/* Right Column: Rounded Asymmetric Image Canvas */
+.about-media-column {
+    flex: 0.8;
+    display: flex;
+    justify-content: flex-end;
+    /* Sticky positioning to keep the image in view while scrolling */
+    position: sticky;
+    top: 40px;
+}
+
+.portrait-container {
+    width: 100%;
+    max-width: 460px;
+    height: 520px;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(74, 59, 50, 0.04);
+}
+
+.portrait-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
