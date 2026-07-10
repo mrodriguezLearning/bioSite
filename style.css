@@ -483,3 +483,138 @@ body {
     object-fit: cover;
     display: block;
 }
+/* ==========================================================================
+   Responsive Design Media Queries
+   ========================================================================== */
+
+/* Tablet Viewports (Max-width: 992px) */
+@media (max-width: 992px) {
+    /* Main Layout Grid Controls */
+    .about-split-layout {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+
+    .about-media-column {
+        position: relative;
+        top: 0;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .portrait-container {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Hero Section Adjustment */
+    .hero-card {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: 50px 30px;
+    }
+
+    .hero-graphic-wrap {
+        min-height: 350px;
+        background-size: contain;
+    }
+
+    .hero-portrait {
+        position: relative;
+        height: 350px;
+        margin: 0 auto;
+    }
+
+    /* Testimonial Cards Layout Grid */
+    .card-matrix {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Hobbies Components Scaling */
+    .hobbies-hero {
+        height: 350px;
+    }
+
+    .hero-text-overlay h1 {
+        font-size: 5rem;
+    }
+
+    .hero-text-overlay p {
+        font-size: 1.5rem;
+    }
+
+    .hobby-row, .hobby-row.reverse {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .hobby-text, .hobby-media {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/* Mobile Viewports (Max-width: 650px) */
+@media (max-width: 650px) {
+    body {
+        padding: 20px 4% 0 4%;
+    }
+
+    /* Header Nav Pill Structural Restyling */
+    .nav-pill {
+        height: auto;
+        border-radius: 20px;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .nav-pill .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-pill .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    .nav-pill .nav-links .active-pill-btn {
+        padding: 8px 16px;
+    }
+
+    /* Typography Reductions for Screen Fit */
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .about-biography h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-text-overlay h1 {
+        font-size: 3.5rem;
+    }
+
+    /* Reverting Grid Layout Matrix to Single Columns */
+    .card-matrix {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer Blocks Adjustments */
+    .footer-top-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
