@@ -309,7 +309,7 @@ body {
     background-color: var(--color-white);
     /* Use a high-quality colorful abstract splash background asset */
     background: url('images/hobbies_banner.jpg') no-repeat top center;
-    background-size: cover;
+    background-size: 100% auto;
     padding: 40px 5% 60px 5%;
     display: flex;
     flex-direction: column;
@@ -330,6 +330,7 @@ body {
 .hero-text-overlay h1 {
     font-size: 8rem;
     font-weight: 700;
+    text-shadow: 0px 0px 50px rgba(255, 255, 255, 1);
     color: var(--color-gray);
     letter-spacing: -1px;
     margin-bottom: 10px;
@@ -337,9 +338,9 @@ body {
 
 .hero-text-overlay p {
     font-size: 2.25rem;
-    font-weight: 400;
+    font-weight: 600;
     color: var(--color-gray);
-    opacity: 0.85;
+    text-shadow: 0px 0px 50px rgba(255, 255, 255, 1);
 }
 
 /* Alternating Showcase Layout Content Block */
@@ -505,6 +506,10 @@ body {
     .portrait-container {
         max-width: 100%;
         height: auto;
+    }
+
+    .hobbies-page {
+        background-size: auto;
     }
 
     /* Hero Section Adjustment */
