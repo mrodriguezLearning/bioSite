@@ -48,6 +48,7 @@ body {
     font-size: 1.15rem;
     font-weight: 500;
     color: var(--color-gray);
+    text-decoration: none;
 }
 
 .nav-pill .nav-links {
